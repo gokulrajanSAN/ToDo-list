@@ -1,22 +1,29 @@
 const addBtn = document.getElementById("addBtn");
-let input = document.getElementById("newTask");
-let myTask = document.getElementById("myTask");
-let createForm = document.getElementById("createForm");
+const input = document.getElementById("newTask");
+const myList = document.querySelector(".myTaskList");
+const checked = document.querySelector(".doneList");
 
-const fruits = ["apple", "mango"];
+function saveList(inputValue) {
+    const li = document.createElement("li");
 
-function addTaskDetails(inputValue) {
-    fruits.push(inputValue);
-    console.log(fruits);
-    myTask.innerHTML = inputValue;
+    const checkBox = document.createElement("input");
+    checkBox.type = "checkbox"
+    li.appendChild(checkBox);
+    // li.classList.add("dailyList");
+    console.log(li)
+    li.innerText = inputValue;
+
+    myList.appendChild(li);
 }
-
-createForm.addEventListener("submit", (e) => {
+addBtn.addEventListener(("click"), (e) => {
     e.preventDefault();
-    console.log(createForm.elements["taskTypeDaily"].checked);
-    console.log(createForm.elements["taskTypeMyTask"].checked);
-    addTaskDetails(input.value);
-})
+    saveList(input.value);
+    input.value = "";
+});
+
+
+
+
 
 
 

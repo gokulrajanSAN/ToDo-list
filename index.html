@@ -16,52 +16,66 @@
     <header class="header">
         <h4>Gokul's ToDo App</h4>
     </header>
-    <nav class="navBar navContainer">
+
+    <nav class="navContainer">
         <div class="profilePic navContItem"><img id="proPic" src="profilePic.png" alt="Profile Pic"></div>
-        <div class="user navContItem">Gokulrajan Sanjeev</div>
+        <div class="userName navContItem">Gokulrajan Sanjeev</div>
     </nav>
-    <main class="task taskContainer">
+
+    <main class="taskContainer">
         <article class="myTask taskCont-item">
             <p class="title">My Task</p>
             <ul class="myTaskList">
-                <p>
-                    <input type="checkbox" name="myTask">
-                    <label for="myTask" id="myTask">task 1</label>
-                </p>
-                <p>
-                    <input type="checkbox" name="" id="">
-                    <label for="task">task 2</label>
-                </p>
-            </ul>
-            <br>
-            <ul class="completedMyTask">
-                <li class="task"><input type="checkbox" name="" id="">list1 com</li>
+
+                <li class="myList"><input type="checkbox" class="checkbox" id="">task1</li>
+                <li class="myList doneList"><input type="checkbox" class="checkbox" id="" checked>list2</li>
+                
+                <input type="checkbox" name="checkbox" id="qwer" checked>
+                <label for="qwer">sebera</label>
+
+                <br>
+
+                <label for="asdf"><input type="checkbox" name="checkbox" id="asdf" checked>sdnk</label>
+                <br>
+                
+                <label><input type="checkbox" name="checkbox" checked>no</label>
+
             </ul>
         </article>
+
         <article class="dailyTask taskCont-item">
             <p class="title">Daily Task</p>
             <ul class="dailyTaskList">
-                <li class="task"><input type="checkbox" name="" id="">list1</li>
-                <li class="task"><input type="checkbox" name="" id="">list1</li>
-                <li class="task"><input type="checkbox" name="" id="">list1</li>
+
+                <div class="dailyList">
+                    <input type="checkbox" name="checkbox" id="zxc">
+                    <label for="zxc">list</label>
+                </div>
+
+                <li class="dailyList"><input type="checkbox" name="">list1</li>
+                <li class="dailyList doneList"><input type="checkbox" name="" class="checkBox" checked>list1</li>
             </ul>
-            <br>
-            <ul class="completedDailyTask">
-                <li class="task"><input type="checkbox" name="" id="">list com</li>
-            </ul>
-        </article> 
+
+        </article>
+
         <article class="createTask taskCont-item">
             <p class="title">Create Task</p>
-            <form class="createForm" id="createForm">
-                <p class="as">
+            <form class="createForm" id="">
+                <p class="asInput">
                     <input type="text" name="newTask" id="newTask" placeholder="Task" required>
                 </p>
+
                 <p class="as">
+                <div>
                     <input type="radio" name="taskType" value="taskTypeDaily" id="taskTypeDaily">
                     <label for="taskTypeDaily">Daily Task</label>
+                </div>
+                <div>
                     <input type="radio" name="taskType" value="taskTypeMyTask" id="taskTypeMyTask">
                     <label for="taskTypeMyTask">My Task</label>
+                </div>
                 </p>
+
                 <button class="btn as" id="addBtn" type="submit">Add Task</button>
                 <button class="btn as" type="reset">Clear</button>
             </form>
